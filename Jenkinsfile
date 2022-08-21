@@ -7,10 +7,7 @@ pipeline{
 	}
 
 	stages {
-	     stage('Code Checkout') {
-  			steps {
-				checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: '956db50b-297d-4797-b42f-dce67ea6a917', url: 'https://github.com/Tejindrakhatri/jenkinsrun-container.git']]])
-
+	     
 	    stage('gitclone') {
 
 			steps {
