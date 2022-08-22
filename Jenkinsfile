@@ -25,7 +25,7 @@ pipeline{
 		stage('Login') {
 
 			steps {
-				sh 'sudo docker login -u tejindra1 -p $DOCKERHUB_CREDENTIALS'
+				sh 'sudo docker login -u tejindra1 -p $DOCKER_PASS'
 			}
 		}
 
