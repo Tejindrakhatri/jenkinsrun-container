@@ -18,7 +18,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t tejindra1/devops:latest .'
+				sh 'docker build -t tejindra1/devops:latest'
 			}
 		}
 
