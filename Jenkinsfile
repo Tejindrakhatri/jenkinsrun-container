@@ -18,7 +18,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t tejindra1/devops:latest'
+				sh 'docker build -t tejindra-devops7 -f Dockerfile .'
 			}
 		}
 
@@ -32,7 +32,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push tejindra1/devops::latest'
+				sh 'docker push tejindra-devops7:latest'
 			}
 		}
 	}
