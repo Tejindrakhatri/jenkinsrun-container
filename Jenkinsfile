@@ -18,21 +18,21 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t tejindra-devops7 -f Dockerfile .'
+				sh 'sudo docker build -t tejindra-devops6 -f Dockerfile .'
 			}
 		}
 
 		stage('Login') {
 
 			steps {
-				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+				sh 'sudo docker login -u tejindra1 -p $tejindra1'
 			}
 		}
 
 		stage('Push') {
 
 			steps {
-				sh 'docker push tejindra-devops7:latest'
+				sh 'sudo docker push tejindra1/devops'
 			}
 		}
 	}
