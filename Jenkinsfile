@@ -25,7 +25,7 @@ pipeline{
 		stage('Login') {
 
 			steps {
-				sh 'sudo docker login -u tejindra1 -p $dockerhubpassword'
+				sh 'sudo docker login -u tejindra1 -p $tejindradockerhubpassword'
 			}
 		}
 
