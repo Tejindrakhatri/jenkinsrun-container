@@ -25,7 +25,7 @@ pipeline{
 		stage('Login') {
 
 			steps {
-				sh 'sudo docker login -u tejindra1 -p $dockerhub'
+				sh 'sudo docker login -u tejindra1 -p $507934cd-fdc1-4dc0-a1e1-b6f63ef8939b'
 			}
 		}
 
