@@ -3,7 +3,7 @@ pipeline{
 	agent any
 
 	environment {
-		DOCKERHUB_CREDENTIALS=credentials('4517b927-fe22-40a1-ad4b-1053e794620b')
+		DOCKERHUB_CREDENTIALS=credentials('DOCKER_PASS')
 	}
 
 	stages {
@@ -25,7 +25,7 @@ pipeline{
 		stage('Login') {
 
 			steps {
-				sh 'sudo docker login -u tejindra1 -p $tejindra1'
+				sh 'sudo docker login -u tejindra1 -p $DOCKERHUB_CREDENTIALS --password-stdin'
 			}
 		}
 
