@@ -45,7 +45,7 @@ pipeline{
 		
 	post {
 		always {
-			sh 'docker container stop'
+			sh 'docker logout'
 		}
 		
 	}
