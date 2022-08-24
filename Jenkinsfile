@@ -28,6 +28,11 @@ pipeline{
 				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | sudo docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
 			}
 		}
+		stage('Run') {
+			steps {
+				sh 'echo sudo docker run -d -p 8080:80 --name tejindra-devops6 tejindra-devops6'
+			}
+		}
 
 		stage('Push') {
 
